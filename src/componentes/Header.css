@@ -1,0 +1,49 @@
+/* Cabeçalho principal */
+header {
+  width: 428px; /* largura fixa da sua página */
+  background: #F0FBFF;
+  color: #006980;
+  height: 70px; /* altura ajustada */
+  margin: 0 auto; /* centraliza horizontalmente */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Container do menu e ícones */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%; /* ocupa toda a largura do header */
+  padding: 0 16px;
+}
+
+/* Lado esquerdo (menu + logo) */
+.menu-icon {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* espaço entre menu e logo */
+}
+
+/* Lado direito (notificação, calendário, usuário) */
+.user-icons {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* espaço entre ícones */
+}
+
+/* Tamanho consistente dos ícones */
+.menu-icon img,
+.user-icons img {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+/* Ajuste opcional para responsividade */
+@media (max-width: 428px) {
+  header {
+    width: 100%;
+  }
+}
