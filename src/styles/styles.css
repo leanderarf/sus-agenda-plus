@@ -1,0 +1,15 @@
+@import url("src/componentes/Header.css");
+
+:root {
+    --cor-de-fundo-primária: #F2F9FF;
+    --cor-de-fundo-secundária: #FFFFFF;
+    --cor-de-fundo-ícones: #A6EDF3;
+    --cor-ícones: #006980;
+    --texto-título: #044669;
+    --ícone-header: #49B4B8;
+    --texto-corpo: #454E52;
+    --texto-footer: #C7EEF3;
+    --botao: #21AFBC;
+    --fonte-principal: 'Poppins';
+    --fonte-secundária: 'Inter';
+}

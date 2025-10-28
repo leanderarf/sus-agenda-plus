@@ -1,7 +1,7 @@
 /* Cabeçalho principal */
 header {
   width: 428px; /* largura fixa da sua página */
-  background: #F0FBFF;
+  background: #F2F9FF;
   color: #006980;
   height: 70px; /* altura ajustada */
   margin: 0 auto; /* centraliza horizontalmente */
@@ -11,7 +11,7 @@ header {
 }
 
 /* Container do menu e ícones */
-nav {
+.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -19,11 +19,26 @@ nav {
   padding: 0 16px;
 }
 
+ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 20px; /* espaço entre os itens */
+    margin: 0;
+    padding: 0;
+}
+
 /* Lado esquerdo (menu + logo) */
 .menu-icon {
   display: flex;
   align-items: center;
-  gap: 10px; /* espaço entre menu e logo */
+  gap: 5px; /* espaço entre menu e logo */
+}
+
+.menu-icon-logo {
+    width: 52px;
+    height: 45px;
+    
 }
 
 /* Lado direito (notificação, calendário, usuário) */
@@ -34,10 +49,10 @@ nav {
 }
 
 /* Tamanho consistente dos ícones */
-.menu-icon img,
+.menu-icon-menu,
 .user-icons img {
-  width: 24px;
-  height: 24px;
+  width: 35px;
+  height: 35px;
   cursor: pointer;
 }
 
