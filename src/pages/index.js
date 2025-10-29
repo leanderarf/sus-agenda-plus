@@ -58,6 +58,28 @@ const Home = () => {
                 </div>
                 <img className='vantagens_image' src='/images/Home_Vantagens.png' alt='Imagem modelo de funcionários e engrenagem acima de suas cabeças. Nuvens ao fundo' />
             </div>
+            <div className='missao'>
+                <h2>Missão, Visão e Valores</h2>
+                <div className='missao_container'>
+                    <p>Contribuir para o desenvolvimento social e tecnológico da comunidade, aplicando o conhecimento acadêmico em soluções reais.</p>
+                    <div className='missao_list'>
+                        <ul className='missao_text_list'>
+                            <li>Ética e responsabilidade social</li>
+                            <li>Inovação e empregabilidade</li>
+                            <li>Comprometimento com os ODS da ONU (3, 9 e 10)</li>
+                        </ul>
+                        <ul className='missao_icon_list'>
+                            <li>
+                                <img src='/icons/unir.png' alt='ícone de Inclusão social'/>
+                                Inclusão social</li>
+                            <li><img src='/icons/reducao.png' alt='ícone de Redução das desigualdades'/>
+                                Redução das desigualdades</li>
+                            <li><img src='/icons/apoio.png' alt='ícone de Apoio a Saúde'/>
+                                Apoio à saúde</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </section>
     )
 }
