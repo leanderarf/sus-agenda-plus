@@ -1,0 +1,198 @@
+@import url("../styles/styles.css");
+
+/* === HERO SECTION === */
+.hero {
+    width: 100%;
+    height: auto; /* <--- CRÍTICO: Ajuste a altura do hero para mostrar a imagem inteira */
+    position: relative;
+    overflow: hidden;
+}
+
+.hero_image {
+    width: 100%;
+    height: 100%; /* <--- CRÍTICO: Faz a imagem preencher o hero */
+    object-fit: cover;
+}
+
+/* Remova .hero_text_container do CSS se você o removeu do JSX */
+/* Se mantiver hero_text_container, ele pode posicionar o título/subtítulo */
+
+.hero_button {
+    width: 85px;
+    height: 23px;
+    position: absolute; /* <--- Essencial para sobrepor */
+    top: 110px; /* <--- Ajuste este valor em PX */
+    left: 52px; /* <--- Ajuste este valor em PX */
+    padding: 0;
+    background-color: #38CAC9;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 8px;
+    text-align: center;
+    line-height: 23px;    
+    font-family: var(--fonte-principal);
+    text-decoration: none;
+    font-weight: 500;
+    z-index: 2; /* Garante que o botão fique acima da imagem */
+}
+
+/* === FUNCIONALIDADES SECTION (4 COLUNAS) === */
+h2 {
+    margin-top: 24px; 
+    margin-bottom: 24px; 
+    padding-left: 16px; 
+    font-family: var(--fonte-principal);
+    font-weight: 600;
+    font-size: 18px; 
+    color: var(--texto-título);
+}
+
+.funcionalidades_list {
+    display: flex;
+    flex-direction: row; 
+    flex-wrap: wrap; 
+    
+    /* CRÍTICO: Use space-around para distribuir os itens uniformemente, 
+       incluindo o que quebra para a próxima linha */
+    justify-content: space-around; 
+    
+    gap: 16px; /* Espaço entre as linhas e colunas */
+    margin: 0 0 32px 5px;    
+    padding: 0 10px; /* Espaço nas laterais */
+    list-style: none;
+}
+
+.funcionalidades_item {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center; 
+    align-self: stretch; /* Garante que todos os itens tenham a mesma altura */
+    
+    /* CRÍTICO: Ajuste a largura para que os 4 primeiros caibam na linha */
+    width: 22%; /*Tente 22% ou 23% para que 4 caibam na linha */
+    max-width: 100px; /* Limite o tamanho máximo para evitar que fiquem muito largos */
+    min-width: 70px;
+}
+
+.funcionalidades_item img {
+    width: 50px;
+    height: 50px; 
+}
+
+.funcionalidades_item h3 {
+    font-family: var(--fonte-principal);
+    font-weight: 600;
+    color: var(--texto-título);
+    font-size: 12px; 
+    line-height: 1.2; 
+    margin: 8px 0 4px 0; /* Espaçamento entre imagem, h3 e p */
+}
+
+.funcionalidades_item p {
+    font-family: var(--fonte-secundária);
+    font-weight: 400;
+    color: var(--texto-corpo);
+    font-size: 9px;
+    margin: 0;
+    line-height: 1.4;
+    text-align: center;
+}
+
+.funcionalidade_rodape {
+    font-family: var(--fonte-secundária);
+    font-weight: 600;
+    text-align: center;
+    font-size: 10px;
+    color: var(--texto-corpo);
+    margin: 0 16px 32px 16px;
+}
+
+/* === VANTAGENS SECTION (3 COLUNAS E IMAGEM DECORATIVA) === */
+.vantagens {
+    background: var(--cor-de-fundo-primária);
+    position: relative; 
+    padding-top: 24px;
+    padding-bottom: 32px; 
+    overflow: hidden; 
+    
+    /* CRÍTICO: Ajuste a altura do container Vantagens para conter a imagem */
+    height: auto; /* Ou uma altura fixa, se preferir. */
+}
+
+
+/* NOVO CONTAINER DE CONTEÚDO (JSX: <div className='vantagens_conteudo'>) */
+.vantagens_conteudo { 
+    /* CRÍTICO: Reduza a largura para deixar espaço para a imagem decorativa */
+    width: 60%; /* Tente 60% ou 65% para que o conteúdo não se sobreponha à imagem */
+    min-width: 250px; 
+    margin-left: 16px; 
+    z-index: 1; 
+}
+
+/* Imagem decorativa no canto inferior direito */
+.vantagens_image {
+    /* CRÍTICO: Dimensionar para cobrir a área */
+    width: 150px; /* Aumente o tamanho da imagem */
+    height: 180px; /* Aumente o tamanho da imagem */
+    
+    position: absolute; 
+    bottom: 35px; 
+    right: 0; 
+    z-index: 0; 
+    object-fit: contain; /* Garante que a imagem se encaixe, ou 'cover' se quiser que preencha */
+    opacity: 0.8; /* Um pouco de transparência se for uma imagem de fundo */
+}
+
+/* Lista de 3 Colunas */
+.vantagens_list {
+    display: flex;
+    flex-direction: row; 
+    flex-wrap: wrap; 
+    justify-content: space-between; 
+    gap: 16px; 
+    
+    margin: 0; 
+    padding: 0; 
+    list-style: none;
+}
+
+/* Item da Lista Vantagens */
+.vantagens_item {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center; 
+    align-self: stretch;
+    
+    /* CRÍTICO: Cálculo para 3 colunas dentro do .vantagens_conteudo */
+    width: calc(33.33% - 11px); 
+    min-width: 70px;
+}
+
+.vantagens_item img {
+    width: 50px;
+    height: 50px; 
+    margin-bottom: 8px;
+}
+
+.vantagens_item h3 {
+    font-family: var(--fonte-principal);
+    font-weight: 600;
+    color: var(--texto-título);
+    font-size: 11px; 
+    line-height: 1.2; 
+    margin: 0 0 4px 0;
+}
+
+.vantagens_item p {
+    font-family: var(--fonte-secundária);
+    font-weight: 400;
+    color: var(--texto-corpo);
+    font-size: 9px;
+    margin: 0;
+    line-height: 1.4;
+    text-align: center;
+}

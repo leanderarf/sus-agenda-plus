@@ -1,4 +1,4 @@
-import './Header.css';
+import './header.css';
 
 const Header = () => {
     return (
@@ -24,7 +24,7 @@ const Header = () => {
                     </li>
                     <li>
                         <a href='#'>
-                            <img className ="calendario" src='icons/calendario.png' alt="Meus agendamentos" />
+                            <img className ="agendamentos" src='icons/agendamentos.png' alt="Meus agendamentos" />
                         </a>
                     </li>
                     <li>

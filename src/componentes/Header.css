@@ -1,7 +1,9 @@
+@import url("../styles/styles.css");
+
 /* Cabeçalho principal */
 header {
   width: 428px; /* largura fixa da sua página */
-  background: #F2F9FF;
+  background: var(--cor-de-fundo-primária);
   color: #006980;
   height: 70px; /* altura ajustada */
   margin: 0 auto; /* centraliza horizontalmente */
