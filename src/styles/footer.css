@@ -1,0 +1,91 @@
+/* === FOOTER SECTION (Ajuste Final) === */
+
+.footer {
+    /* Cor de Fundo do Modelo */
+    background-color: var(--texto-título);
+    padding: 30px 16px 20px 16px; 
+    color: white;
+}
+
+.footer_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 450px; 
+    margin: 0 auto;
+}
+
+/* --- Logos --- */
+.footer_logos {
+    display: flex;
+    align-items: center;
+    justify-content: space-around; /* Use space-around para melhor distribuição horizontal */
+    width: 100%; /* Ocupa a largura total do container */
+    max-width: 250px; /* Limita a largura do bloco de logos para centralização */
+    margin-bottom: 24px;
+}
+
+.footer_logos img {
+    width: 100%;
+    height: auto;
+    /* O filtro é crucial para garantir que os logos sejam brancos, como na imagem */
+}
+
+/* --- Container de Links --- */
+.footer_links_container {
+    display: flex;
+    flex-direction: column;
+    width: 100%; 
+    gap: 16px;
+    padding: 0 4px; /* Adiciona um pequeno padding interno para afastar os links das bordas */
+}
+
+.footer_links {
+    display: flex;
+    flex-direction: row; 
+    flex-wrap: wrap; 
+    
+    /* CRÍTICO: Use space-between para links de navegação */
+    justify-content: space-between; 
+    
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.footer_links a {
+    color: white;
+    text-decoration: none;
+    font-family: var(--fonte-secundária);
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 1.4;
+    margin-bottom: 8px;
+    flex-grow: 1; /* Permite que os itens cresçam para preencher o espaço */
+    text-align: center; /* Centraliza o texto dentro do espaço de cada link */
+}
+
+/* Estilo específico para a linha de links de navegação (4 itens em uma linha) */
+.nav_links {
+    /* CRÍTICO: Garante a linha divisória */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3); 
+    padding-bottom: 16px;
+    justify-content: space-between;
+}
+
+/* Estilo para a linha de links legais (Alinhamento em duas linhas) */
+.legal_links {
+    /* CRÍTICO: Força o alinhamento à esquerda, mas ainda usando flexbox para quebra de linha */
+    justify-content: flex-start;
+    gap: 12px 18px; /* Espaçamento ajustado horizontalmente (18px) e verticalmente (12px) */
+}
+
+.legal_links a {
+    /* CRÍTICO: Remove o flex-grow e define a base para que fiquem alinhados */
+    flex-grow: 0;
+    text-align: left; /* Alinha o texto à esquerda dentro da sua área */
+}
+
+.footer_links a:hover {
+    text-decoration: underline;
+}
