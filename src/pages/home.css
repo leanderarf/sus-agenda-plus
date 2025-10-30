@@ -2,283 +2,519 @@
 
 /* === HERO SECTION === */
 .hero {
-    width: 100%;
-    height: auto; /* <--- CRÍTICO: Ajuste a altura do hero para mostrar a imagem inteira */
-    position: relative;
-    overflow: hidden;
+  width: 100%;
+  height: auto; /* <--- CRÍTICO: Ajuste a altura do hero para mostrar a imagem inteira */
+  position: relative;
+  overflow: hidden;
 }
 
 .hero_image {
-    width: 100%;
-    height: 100%; /* <--- CRÍTICO: Faz a imagem preencher o hero */
-    object-fit: cover;
+  width: 100%;
+  height: 100%; /* <--- CRÍTICO: Faz a imagem preencher o hero */
+  object-fit: cover;
 }
 
 /* Remova .hero_text_container do CSS se você o removeu do JSX */
 /* Se mantiver hero_text_container, ele pode posicionar o título/subtítulo */
 
 .hero_button {
-    width: 85px;
-    height: 23px;
-    position: absolute; /* <--- Essencial para sobrepor */
-    top: 110px; /* <--- Ajuste este valor em PX */
-    left: 52px; /* <--- Ajuste este valor em PX */
-    padding: 0;
-    background-color: #38CAC9;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 8px;
-    text-align: center;
-    line-height: 23px;    
-    font-family: var(--fonte-principal);
-    text-decoration: none;
-    font-weight: 500;
-    z-index: 2; /* Garante que o botão fique acima da imagem */
+  width: 85px;
+  height: 23px;
+  position: absolute; /* <--- Essencial para sobrepor */
+  top: 110px; /* <--- Ajuste este valor em PX */
+  left: 52px; /* <--- Ajuste este valor em PX */
+  padding: 0;
+  background-color: #38cac9;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 8px;
+  text-align: center;
+  line-height: 23px;
+  font-family: var(--fonte-principal);
+  text-decoration: none;
+  font-weight: 500;
+  z-index: 2; /* Garante que o botão fique acima da imagem */
 }
 
 /* === FUNCIONALIDADES SECTION (4 COLUNAS) === */
 h2 {
-    margin-top: 24px; 
-    margin-bottom: 24px; 
-    padding-left: 16px; 
-    font-family: var(--fonte-principal);
-    font-weight: 600;
-    font-size: 18px; 
-    color: var(--texto-título);
+  margin-top: 24px;
+  margin-bottom: 24px;
+  padding-left: 16px;
+  font-family: var(--fonte-principal);
+  font-weight: 600;
+  font-size: 18px;
+  color: var(--texto-título);
 }
 
 .funcionalidades_list {
-    display: flex;
-    flex-direction: row; 
-    flex-wrap: wrap; 
-    
-    /* CRÍTICO: Use space-around para distribuir os itens uniformemente, 
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  /* CRÍTICO: Use space-around para distribuir os itens uniformemente, 
        incluindo o que quebra para a próxima linha */
-    justify-content: space-around; 
-    
-    gap: 16px; /* Espaço entre as linhas e colunas */
-    margin: 0 0 32px 5px;    
-    padding: 0 10px; /* Espaço nas laterais */
-    list-style: none;
+  justify-content: space-around;
+
+  gap: 16px; /* Espaço entre as linhas e colunas */
+  margin: 0 0 32px 5px;
+  padding: 0 10px; /* Espaço nas laterais */
+  list-style: none;
 }
 
 .funcionalidades_item {
-    display: flex;
-    flex-direction: column; 
-    align-items: center; 
-    text-align: center; 
-    align-self: stretch; /* Garante que todos os itens tenham a mesma altura */
-    
-    /* CRÍTICO: Ajuste a largura para que os 4 primeiros caibam na linha */
-    width: 22%; /*Tente 22% ou 23% para que 4 caibam na linha */
-    max-width: 100px; /* Limite o tamanho máximo para evitar que fiquem muito largos */
-    min-width: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  align-self: stretch; /* Garante que todos os itens tenham a mesma altura */
+
+  /* CRÍTICO: Ajuste a largura para que os 4 primeiros caibam na linha */
+  width: 22%; /*Tente 22% ou 23% para que 4 caibam na linha */
+  max-width: 100px; /* Limite o tamanho máximo para evitar que fiquem muito largos */
+  min-width: 70px;
 }
 
 .funcionalidades_item img {
-    width: 50px;
-    height: 50px; 
+  width: 50px;
+  height: 50px;
 }
 
 .funcionalidades_item h3 {
-    font-family: var(--fonte-principal);
-    font-weight: 600;
-    color: var(--texto-título);
-    font-size: 12px; 
-    line-height: 1.2; 
-    margin: 8px 0 4px 0; /* Espaçamento entre imagem, h3 e p */
+  font-family: var(--fonte-principal);
+  font-weight: 600;
+  color: var(--texto-título);
+  font-size: 12px;
+  line-height: 1.2;
+  margin: 8px 0 4px 0; /* Espaçamento entre imagem, h3 e p */
 }
 
 .funcionalidades_item p {
-    font-family: var(--fonte-secundária);
-    font-weight: 400;
-    color: var(--texto-corpo);
-    font-size: 9px;
-    margin: 0;
-    line-height: 1.4;
-    text-align: center;
+  font-family: var(--fonte-secundária);
+  font-weight: 400;
+  color: var(--texto-corpo);
+  font-size: 9px;
+  margin: 0;
+  line-height: 1.4;
+  text-align: center;
 }
 
 .funcionalidade_rodape {
-    font-family: var(--fonte-secundária);
-    font-weight: 600;
-    text-align: center;
-    font-size: 10px;
-    color: var(--texto-corpo);
-    margin: 0 16px 32px 16px;
+  font-family: var(--fonte-secundária);
+  font-weight: 600;
+  text-align: center;
+  font-size: 10px;
+  color: var(--texto-corpo);
+  margin: 0 16px 32px 16px;
 }
 
 /* === VANTAGENS SECTION (3 COLUNAS E IMAGEM DECORATIVA) === */
 .vantagens {
-    background: var(--cor-de-fundo-primária);
-    position: relative; 
-    padding-top: 24px;
-    padding-bottom: 32px; 
-    overflow: hidden; 
-    
-    /* CRÍTICO: Ajuste a altura do container Vantagens para conter a imagem */
-    height: auto; /* Ou uma altura fixa, se preferir. */
+  background: var(--cor-de-fundo-primária);
+  position: relative;
+  padding-top: 24px;
+  padding-bottom: 32px;
+  overflow: hidden;
+
+  /* CRÍTICO: Ajuste a altura do container Vantagens para conter a imagem */
+  height: auto; /* Ou uma altura fixa, se preferir. */
 }
 
-
 /* NOVO CONTAINER DE CONTEÚDO (JSX: <div className='vantagens_conteudo'>) */
-.vantagens_conteudo { 
-    /* CRÍTICO: Reduza a largura para deixar espaço para a imagem decorativa */
-    width: 60%; /* Tente 60% ou 65% para que o conteúdo não se sobreponha à imagem */
-    min-width: 250px; 
-    margin-left: 16px; 
-    z-index: 1; 
+.vantagens_conteudo {
+  /* CRÍTICO: Reduza a largura para deixar espaço para a imagem decorativa */
+  width: 60%; /* Tente 60% ou 65% para que o conteúdo não se sobreponha à imagem */
+  min-width: 250px;
+  margin-left: 16px;
+  z-index: 1;
 }
 
 /* Imagem decorativa no canto inferior direito */
 .vantagens_image {
-    /* CRÍTICO: Dimensionar para cobrir a área */
-    width: 150px; /* Aumente o tamanho da imagem */
-    height: 180px; /* Aumente o tamanho da imagem */
-    
-    position: absolute; 
-    bottom: 35px; 
-    right: 0; 
-    z-index: 0; 
-    object-fit: contain; /* Garante que a imagem se encaixe, ou 'cover' se quiser que preencha */
-    opacity: 0.8; /* Um pouco de transparência se for uma imagem de fundo */
+  /* CRÍTICO: Dimensionar para cobrir a área */
+  width: 150px; /* Aumente o tamanho da imagem */
+  height: 180px; /* Aumente o tamanho da imagem */
+
+  position: absolute;
+  bottom: 35px;
+  right: 0;
+  z-index: 0;
+  object-fit: contain; /* Garante que a imagem se encaixe, ou 'cover' se quiser que preencha */
+  opacity: 0.8; /* Um pouco de transparência se for uma imagem de fundo */
 }
 
 /* Lista de 3 Colunas */
 .vantagens_list {
-    display: flex;
-    flex-direction: row; 
-    flex-wrap: wrap; 
-    justify-content: space-between; 
-    gap: 16px; 
-    
-    margin: 0; 
-    padding: 0; 
-    list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 16px;
+
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 /* Item da Lista Vantagens */
 .vantagens_item {
-    display: flex;
-    flex-direction: column; 
-    align-items: center; 
-    text-align: center; 
-    align-self: stretch;
-    
-    /* CRÍTICO: Cálculo para 3 colunas dentro do .vantagens_conteudo */
-    width: calc(33.33% - 11px); 
-    min-width: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  align-self: stretch;
+
+  /* CRÍTICO: Cálculo para 3 colunas dentro do .vantagens_conteudo */
+  width: calc(33.33% - 11px);
+  min-width: 70px;
 }
 
 .vantagens_item img {
-    width: 50px;
-    height: 50px; 
-    margin-bottom: 8px;
+  width: 50px;
+  height: 50px;
+  margin-bottom: 8px;
 }
 
 .vantagens_item h3 {
-    font-family: var(--fonte-principal);
-    font-weight: 600;
-    color: var(--texto-título);
-    font-size: 11px; 
-    line-height: 1.2; 
-    margin: 0 0 4px 0;
+  font-family: var(--fonte-principal);
+  font-weight: 600;
+  color: var(--texto-título);
+  font-size: 11px;
+  line-height: 1.2;
+  margin: 0 0 4px 0;
 }
 
 .vantagens_item p {
-    font-family: var(--fonte-secundária);
-    font-weight: 400;
-    color: var(--texto-corpo);
-    font-size: 9px;
-    margin: 0;
-    line-height: 1.4;
-    text-align: center;
+  font-family: var(--fonte-secundária);
+  font-weight: 400;
+  color: var(--texto-corpo);
+  font-size: 9px;
+  margin: 0;
+  line-height: 1.4;
+  text-align: center;
 }
 
 .missao {
-    margin-bottom: 32px;
+  margin-bottom: 32px;
 }
 
 .missao h2 {
-    color: var(--texto-título);
-    font-family: var(--fonte-principal);
-    font-weight: 600;
-    font-size: 18px;
-    text-align: center;
-    margin: 31px 0 14px 0;
-    padding: 0;
+  color: var(--texto-título);
+  font-family: var(--fonte-principal);
+  font-weight: 600;
+  font-size: 18px;
+  text-align: center;
+  margin: 31px 0 14px 0;
+  padding: 0;
 }
 
 .missao_container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: start;
+  display: flex; /* Habilita o layout de duas colunas */
+  flex-direction: row; /* Coloca .missao_text e .missao_icon_list lado a lado */
+  align-items: flex-start ; /* Alinha o topo das duas colunas */
+  text-align: start;
+  margin: 0;
+  padding: 0;
+  width: 100%; /* Ocupa a largura total */
 }
 
+/* 2. NOVO BLOCO: Estilo para o missao_text */
+/* Este bloco vai controlar a coluna que contém o <p> e a <ul> */
+.missao_text {
+  width:60%; /* Define a largura da primeira coluna */
+  /* Define o recuo principal para toda a coluna */
+  padding-left: 13px;
+  box-sizing: border-box;
+}
+
+/* 3. ALINHAMENTO do Parágrafo */
 .missao_container p {
-    font-family: var(--fonte-secundária);
-    font-weight: 500;
-    color: var(--texto-título);
-    font-size: 12px;
-    margin: 0 10px 16px 13px;
-    line-height: 1.4;
+  font-family: var(--fonte-secundária);
+  font-weight: 500;
+  color: var(--texto-título);
+  font-size: 10px;
+  line-height: 1.4;
+
+  /* 💥 AJUSTE CHAVE: Compensar o padding da lista (16px) 
+     para que o texto do <p> se alinhe com o TEXTO do <li> (após o marcador). */
+  margin: 0 10px 16px 16px;
+  padding: 0;
+  /* Adicionar um width de 100% menos margens para ocupar o espaço do missao_text */
+  width: calc(100% - 26px); /* 100% menos 10px (dir) e 16px (esq) */
+  box-sizing: border-box;
 }
 
-.missao_list {
-    /* CRÍTICO: Transforma o container da lista em um Flex Container */
-    display: flex;
-    flex-direction: row; /* Coloca as ULs lado a lado */
-    justify-content: space-between; /* Distribui o espaço entre as duas colunas */
-    align-items: flex-start; /* Alinha o topo das duas listas */
-    
-    width: 100%; /* Ocupa a largura total do container pai */
-    
-    margin: 0;
-    color: var(--texto-corpo);
-    font-size: 9px;
-    font-family: var(--fonte-secundária);
-    font-weight: 400;
-    /* Remova gap: 8px daqui, e use margin/padding nas listas individuais */
-}
-
-/* Estilização da primeira UL (lista de texto) */
+/* 4. ALINHAMENTO da Lista de Texto */
 .missao_text_list {
-    width: 55%; /* Dedica um pouco mais de espaço para esta coluna */
-    padding-left: 16px; /* Garante o recuo para a marcação da lista */
-    list-style-type: disc; /* Isso se aplica à primeira UL */
-    flex-direction: column;
-    gap: 8px; /* Espaçamento entre os itens */
-    align-items: start;
-    margin-left: 13px;
+  /* 💥 AJUSTE CHAVE: Remove a margin-left para alinhar a UL com a borda do missao_text. */
+  margin-left: 0;
+
+  /* padding-left é necessário (e deve ser o mesmo que a margin-left do <p>) 
+     para dar espaço ao marcador (disc). */
+  padding-left: 30px;
+
+  width: auto;
+  list-style-type: disc;
+  flex-direction: column;
+  gap: 4px;
+  align-items: start;
+  color: var(--texto-corpo);
+  font-size: 8px;
+  font-family: var(--fonte-secundária);
+  font-weight: 400;
 }
 
-/* Estilização da segunda UL (lista de ícones) */
+/* 5. AJUSTE na Lista de Ícones */
 .missao_icon_list {
-    /* Substitui a marca de lista de disc */
-    list-style-type: none; 
-    width: 40%; /* Dedica menos espaço para esta coluna */
+  list-style-type: none;
+  width: 50%; /* Define a largura da segunda coluna */
 
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    gap: 8px; /* Espaçamento entre os itens */
-    margin: 0 10px 0 32px;
-    padding-left: 22px;
-    background: var(--cor-de-fundo-primária);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  
+
+  /* 💥 AJUSTE CHAVE: Remove ou simplifica margens e paddings laterais desnecessários */
+  margin:  15px 10px 0 44px; /* Apenas uma margem à direita para o espaçamento */
+  padding-left: 0; /* Remove padding desnecessário que causa recuo */
+
+  background: var(--cor-de-fundo-primária);
+  box-sizing: border-box;
+  padding: 20px 15px;
+  
+  
 }
 
 .missao_icon_list li {
-    display: flex;
-    align-items: center; /* Alinha o ícone e o texto verticalmente */
-    gap: 4px;
-    color: var(--texto-título);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--texto-título);
+  /* Garante que o texto e o ícone não sejam quebrados em linhas diferentes */
+  white-space: nowrap;
+  font-size: 10.8px;
+  font-family: var(--fonte-secundária);
 }
 
+/* 6. CORREÇÃO DE ALINHAMENTO DO TEXTO */
+/* O texto e o ícone na lista de ícones estão alinhados pelo gap. Está OK. */
+/* Garantir que o texto do <li> inicie na mesma linha vertical do parágrafo.
+ O texto do <p> começa em 13px (do .missao_text).
+ O texto da ul.missao_text_list começa em 13px + 16px (padding) = 29px.
+ 
+ Para alinhar o TEXTO do <p> com o TEXTO da <ul>, o <p> precisa de um recuo extra.
+ Se a imagem mostra o texto alinhado, use a solução abaixo: */
 
 .missao_icon_list img {
-    width: 15px;
-    height: 15px;
+  width: 20px;
+  height: 20px;
+}
+
+.impacto {
+    padding: 0;
+    background: var(--cor-de-fundo-primária);
+}
+
+.impacto_titulo {
+    font-family: var(--fonte-principal);
+    font-weight: 600;
+    text-align: end;
+    font-size: 18px;
+    color: var(--texto-título);
+    margin: 10px 0 24px 0;
+    padding: 10px 16px;  
+}
+
+.impacto_container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin: 0;
+    padding: 0;
+    gap: 16px;
+}
+
+.impacto_container img {
+    width: 35%;
+    height: auto;
+    margin: 0;
+    align-self: flex-end;
+}
+
+.impacto_list {
+    width: 55%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    gap: 16px;
+    margin: 0 16px 0 0;
+    padding: 0 16px 0 0 ;
+    list-style: none;
+}
+
+.impacto_item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    align-self: stretch;
+
+    /* CRÍTICO: Cálculo para 3 colunas dentro do .vantagens_conteudo */
+    width: 30%;
+    min-width: 70px;
+}
+
+.impacto_item img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 8px;
+  align-self: center;
+}
+
+.impacto_item h3 {
+  font-family: var(--fonte-principal);
+  font-weight: 600;
+  color: var(--texto-título);
+  font-size: 11px;
+  line-height: 1.2;
+  margin: 0 0 8px 0;
+}
+
+.impacto_item p {
+  font-family: var(--fonte-secundária);
+  font-weight: 400;
+  color: var(--texto-corpo);
+  font-size: 7px;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.banner {
+    width: 100%;
+    height: auto;
+    position: relative;
+    margin-top: 32px;
+    margin-bottom: 16px;
+}
+
+.banner_image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.banner_button {
+    width: 120px;
+    height: 32px;
+    position: absolute; 
+    bottom: 57px; 
+    left: 60px;
+    padding: 0;
+    background-color: #009AAB;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12px;
+    text-align: center;
+    line-height: 32px;
+    font-family: var(--fonte-principal);
+    text-decoration: none;
+    font-weight: 500;
+    z-index: 2; 
+}   
+
+/* === FAQ SECTION === */
+
+.faq {
+    padding: 16px 16px 0 16px;
+    background: white;
+}
+
+.faq_titulo {
+    font-family: var(--fonte-principal);
+    font-weight: 600;
+    text-align: center;
+    font-size: 18px;
+    color: var(--texto-título);
+    margin: 10px 0 24px 0;
+    padding: 0;
+}
+
+.faq_accordion {
+    /* Base do Botão/Cabeçalho do FAQ (como no modelo) */
+    background-color: white;
+    color: var(--texto-título);
+    cursor: pointer;
+    padding: 16px 0;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 14px;
+    transition: 0.4s;
+    font-family: var(--fonte-principal);
+    font-weight: 500;
+    
+    /* Linha de separação */
+    border-bottom: 1px solid #ddd;
+}
+
+.faq_accordion:last-of-type {
+    border-bottom: none;
+}
+
+/* Estado Ativo/Hover */
+.faq_accordion.active, .faq_accordion:hover {
+    color: var(--texto-título); /* Ex: #38CAC9 ou #007bff */
+}
+
+/* Símbolo de Mais (+) e Menos (-) */
+.faq_accordion:after {
+    /* Símbolo Mais (+) */
+    content: '\203A'; /* Chevron Right */
+    color: var(--texto-corpo);
+    font-weight: 500;
+    float: right;
+    margin-left: 5px;
+    font-size: 20px;
+    transform: rotate(90deg); /* Faz o chevron virar um símbolo de 'v' */
+    transition: transform 0.4s;
+}
+
+.faq_accordion.active:after {
+    /* Símbolo Menos (-) ou virado (v) */
+    content: '\203A';
+    transform: rotate(-90deg); /* Vira para cima quando ativo */
+}
+
+/* Painel de Conteúdo (Animação) */
+.faq_panel {
+    padding: 0 0 0 0; /* Remove padding lateral */
+    background-color: var(--cor-de-fundo-secundária);
+    max-height: 0;
+    overflow: hidden;
+    /* CRÍTICO: Transição suave para o max-height */
+    transition: max-height 0.2s ease-out;
+}
+
+.faq_panel p {
+    /* Estilo para o parágrafo da resposta */
+    font-family: var(--fonte-secundária);
+    font-size: 12px;
+    color: var(--texto-corpo);
+    font-weight: 500;
+    padding: 0 0 16px 0; /* Adiciona padding inferior para espaçamento */
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* Quando o painel está aberto (classe 'open' ou 'active' no painel) */
+/* OBS: Esta classe é controlada pelo JS/React. */
+.faq_panel.open {
+    max-height: 500px; /* Um valor alto para forçar a abertura */
 }
