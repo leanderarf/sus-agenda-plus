@@ -1,0 +1,166 @@
+/* Fundo geral */
+.login-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: space-between;
+  background-color: #ffffff;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Card central */
+.login-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+}
+
+/* Ícone de usuário */
+.login-user-icon {
+  display: block;
+  width: 120px;
+  height: 120px;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.user-icon::before {
+  content: "";
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 35%;
+  height: 35%;
+  border-radius: 50%;
+  border: 8px solid #3ab1b0;
+}
+
+.user-icon::after {
+  content: "";
+  position: absolute;
+  bottom: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70%;
+  height: 40%;
+  border-bottom: 8px solid #3ab1b0;
+  border-radius: 50% 50% 0 0;
+}
+
+/* Formulário */
+.login-form {
+  width: 90%;
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+}
+
+.login-label {
+  font-weight: 700;
+  color: #3ab1b0;
+  font-size: 1.2rem;
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+
+.login-input {
+  padding: 14px;
+  border-radius: 14px;
+  border: 1px solid #d6d6d6;
+  outline: none;
+  font-size: 1rem;
+}
+
+.login-input::placeholder {
+  color: #c3c3c3;
+}
+
+/* Checkbox */
+.login-checkbox {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+  gap: 8px;
+}
+
+.login-checkbox label {
+  color: #3ab1b0;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Botão Entrar */
+.login-button {
+  background-color: #24aeb4;
+  color: #fff;
+  border: none;
+  border-radius: 14px;
+  padding: 14px 0;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.login-button:hover {
+  background-color: #229ea3;
+}
+
+/* Links inferiores */
+.login-links {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.link {
+  color: #24aeb4;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* Rodapé */
+.login-footer {
+  background-color: #093b53;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 25px 0;
+  margin-top: 40px;
+}
+
+.footer-logos {
+  display: flex;
+  gap: 60px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.footer-logos img {
+  height: 40px;
+}
+
+.footer-links,
+.footer-policies {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+.footer-links a,
+.footer-policies a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.footer-links a:hover,
+.footer-policies a:hover {
+  text-decoration: underline;
+}

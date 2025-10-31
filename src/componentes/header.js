@@ -7,29 +7,29 @@ const Header = () => {
                 <ul className="menu-icon">
                     <li>
                         <a href='#'>
-                            <img className='menu-icon-menu' src='icons/menu.png' alt="Menu Hamburguer SUS Agenda+" />                        
+                            <img className='menu-icon-menu' src='/icons/menu.png' alt="Menu Hamburguer SUS Agenda+" />                        
                         </a>
                     </li>
                     <li>
                         <a href='#'>
-                            <img className='menu-icon-logo'src='icons/logo-menu.png' alt="Logo SUS Agenda+" />
+                            <img className='menu-icon-logo'src='/icons/logo-menu.png' alt="Logo SUS Agenda+" />
                         </a>
                     </li>
                 </ul>
                 <ul className="user-icons">
                     <li>
                         <a href='#'>
-                            <img className="notificacao" src='icons/notificacao.png' alt="Minhas notificações" />
+                            <img className="notificacao" src='/icons/notificacao.png' alt="Minhas notificações" />
                         </a>
                     </li>
                     <li>
                         <a href='#'>
-                            <img className ="agendamentos" src='icons/agendamentos.png' alt="Meus agendamentos" />
+                            <img className ="agendamentos" src='/icons/agendamentos.png' alt="Meus agendamentos" />
                         </a>
                     </li>
                     <li>
-                        <a href='#'>
-                            <img className="usuario" src='icons/usuario-menu.png' alt="Usuário" />
+                        <a href='/login'>
+                            <img className="usuario" src='/icons/usuario-menu.png' alt="Usuário" />
                         </a>
                     </li>
                 </ul>
