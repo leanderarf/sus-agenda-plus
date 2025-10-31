@@ -8,7 +8,7 @@ const Footer = () => {
                 <div className="footer_logos">
                     {/* Supondo que você tenha ícones/imagens para os logos */}
                     <img src="/images/Logo_SUS.png" alt="Logo SUS" className="logo_sus" />
-                    <img src="/images/Logo_UNIP1.png" alt="Logo UNIP" className="logo_unip" />
+                    <img src="/images/Logo_UNIP.png" alt="Logo UNIP" className="logo_unip" />
                 </div>
 
                 {/* Seção de Links */}

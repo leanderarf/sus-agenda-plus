@@ -4,29 +4,29 @@
     /* Cor de Fundo do Modelo */
     background-color: var(--texto-título);
     padding: 30px 16px 20px 16px; 
-    color: white;
+    color: var(--cor-de-fundo-sencundária);
 }
 
 .footer_container {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    max-width: 450px; 
+    align-items: stretch;
+    max-width: 100%; 
     margin: 0 auto;
 }
 
 /* --- Logos --- */
 .footer_logos {
     display: flex;
-    align-items: center;
-    justify-content: space-around; /* Use space-around para melhor distribuição horizontal */
+    flex-direction: row;
+    align-items: stretch;
+    gap: 16px;
     width: 100%; /* Ocupa a largura total do container */
-    max-width: 250px; /* Limita a largura do bloco de logos para centralização */
-    margin-bottom: 24px;
+    margin-bottom: -10px;
 }
 
 .footer_logos img {
-    width: 100%;
+    width: 180px;
     height: auto;
     /* O filtro é crucial para garantir que os logos sejam brancos, como na imagem */
 }
@@ -54,30 +54,30 @@
 }
 
 .footer_links a {
-    color: white;
+    color: var(--texto-footer);
     text-decoration: none;
-    font-family: var(--fonte-secundária);
-    font-size: 10px;
-    font-weight: 400;
+    font-family: var(--fonte-primária);
+    font-size: 9px;
+    font-weight: 500;
     line-height: 1.4;
     margin-bottom: 8px;
-    flex-grow: 1; /* Permite que os itens cresçam para preencher o espaço */
-    text-align: center; /* Centraliza o texto dentro do espaço de cada link */
+    text-align: start; /* Centraliza o texto dentro do espaço de cada link */
 }
 
 /* Estilo específico para a linha de links de navegação (4 itens em uma linha) */
 .nav_links {
     /* CRÍTICO: Garante a linha divisória */
     border-bottom: 1px solid rgba(255, 255, 255, 0.3); 
-    padding-bottom: 16px;
-    justify-content: space-between;
+    padding-bottom: 14px;
+    justify-content: flex-start; 
+    gap: 30px;
 }
 
 /* Estilo para a linha de links legais (Alinhamento em duas linhas) */
 .legal_links {
     /* CRÍTICO: Força o alinhamento à esquerda, mas ainda usando flexbox para quebra de linha */
     justify-content: flex-start;
-    gap: 12px 18px; /* Espaçamento ajustado horizontalmente (18px) e verticalmente (12px) */
+    gap: 10px 14px; /* Espaçamento ajustado horizontalmente (18px) e verticalmente (12px) */
 }
 
 .legal_links a {
