@@ -1,0 +1,111 @@
+.esqueceu-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--cor-de-fundo-secundária);
+  min-height: 100vh;
+  font-family: var(--fonte-principal);
+}
+
+/* Banner */
+.banner {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* Formulário */
+.formulario {
+  width: 90%;
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 25px;
+}
+
+.label {
+  font-weight: 700;
+  color: var(--ícone-header);
+  font-size: 1.1rem;
+  margin-bottom: 6px;
+}
+
+.input {
+  padding: 14px;
+  border-radius: 14px;
+  border: 1px solid #d6d6d6;
+  outline: none;
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.input::placeholder {
+  color: var(--texto-corpo);
+  opacity: 25%;
+}
+
+/* Texto abaixo do campo */
+.texto-opcao {
+  color: var(--ícone-header);
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+/* Botões de rádio */
+.radio-grupo {
+  display: flex;
+  gap: 25px;
+  margin-bottom: 20px;
+}
+
+.radio {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  color: var(--ícone-header);
+  font-size: 1.05rem;
+}
+
+.radio input[type="radio"] {
+  appearance: none;
+  width: 21px;
+  height: 21px;
+  border: 2px solid var(--ícone-header);
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+}
+
+.radio input[type="radio"]:checked::before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 10px;
+  height: 10px;
+  background-color: var(--ícone-header);
+  border-radius: 50%;
+}
+
+/* Botão */
+.botao-enviar {
+  background-color: var(--botao);
+  color: var(--cor-de-fundo-secundária);
+  border: none;
+  border-radius: 14px;
+  padding: 14px 0;
+  font-size: 1.3rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s;
+  margin-bottom: 60px;
+}
+
+.botao-enviar:hover {
+  background-color: var(--ícone-header);
+}

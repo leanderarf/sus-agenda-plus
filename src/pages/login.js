@@ -44,7 +44,7 @@ const Login = () => {
                 </button>
 
                 <div className="login-links">
-                    <a href="#" className="link">
+                    <a href="/esqueceusenha1" className="link">
                     Esqueceu a senha?
                     </a>
                     <a href="#" className="link">
