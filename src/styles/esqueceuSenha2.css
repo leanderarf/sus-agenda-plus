@@ -1,0 +1,94 @@
+.esqueceu-senha-2-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--cor-);
+  font-family: var(--fonte-principal);
+  padding-bottom: 50px;
+}
+
+/* Banner */
+.banner {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* Conteúdo */
+.esqueceu-senha-2-formulario {
+  width: 85%;
+  margin-top: 40px;
+}
+
+.esqueceu-senha-2-formulario h2 {
+  color: var(--ícone-header);
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 25px;
+  line-height: 1.4rem;
+}
+
+/* Inputs do código */
+.code-inputs {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.code-inputs input {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  border: 1px solid var(--ícone-header);
+  font-size: 1.5rem;
+  text-align: center;
+  color: var(--ícone-header);
+  outline: none;
+}
+
+.code-inputs input:focus {
+  border: 2px solid var(--ícone-header);
+}
+
+/* Botão */
+.btn-enviar {
+  width: 100%;
+  background-color: var(--botao);
+  color: var(--cor-de-fundo-secundária);
+  font-size: 1.2rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 15px;
+  padding: 14px 0;
+  cursor: pointer;
+  margin-bottom: 25px;
+}
+
+.btn-enviar:hover {
+  background-color: var(--ícone-header);
+}
+
+/* Reenvio */
+.resend-section {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.text-info {
+  color: var(--ícone-header);
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.text-link {
+  color: var(--texto-título);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.text-link:hover {
+  text-decoration: underline;
+}

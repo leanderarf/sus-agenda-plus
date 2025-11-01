@@ -1,10 +1,18 @@
 import React, { useState } from "react";
 import "../styles/esqueceuSenha1.css";
+import { useNavigate } from "react-router-dom";
 import Footer from "../componentes/footer";
 import Header from "../componentes/header";
 
 const EsqueceuSenha1 = () => {
   const [metodo, setMetodo] = useState("email");
+
+  const navigate = useNavigate();
+
+  const handleNextStep = (e) => {
+    e.preventDefault();
+    navigate("/esqueceuSenha2"); // rota da próxima tela
+  };
 
   return (
     <div className="esqueceu-container">
@@ -50,7 +58,7 @@ const EsqueceuSenha1 = () => {
             </label>
             </div>
 
-            <button type="submit" className="botao-enviar">
+            <button type="submit" className="botao-enviar" onClick={handleNextStep}>
             Enviar
             </button>
         </div>
