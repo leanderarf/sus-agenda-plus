@@ -47,7 +47,7 @@ const Login = () => {
                     <a href="/esqueceusenha1" className="link">
                     Esqueceu a senha?
                     </a>
-                    <a href="#" className="link">
+                    <a href="/cadastro" className="link">
                     Cadastre-se
                     </a>
                 </div>
