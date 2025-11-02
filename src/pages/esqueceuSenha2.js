@@ -1,39 +1,45 @@
 import React from "react";
 import "../styles/esqueceuSenha2.css";
+import { useNavigate } from "react-router-dom";
 import Header from "../componentes/header";
 import Footer from "../componentes/footer";
 
 const EsqueceuSenha2 = () => {
+    const navigate = useNavigate();
 
+    const handleNextStep = (e) => {
+        e.preventDefault();
+        navigate("/esqueceuSenha3"); // rota da próxima tela
+    };
 
-  return (
-    <div className="esqueceu-senha-2-container">
-        <Header /> 
+    return (
+        <div className="esqueceu-senha-2-container">
+            <Header /> 
 
-        <div className="banner">
-            <img className="banner_image" src="/images/Código de verificação.png" alt="Imagem de Código de Verificação" />
-        </div>
-
-        <div className="esqueceu-senha-2-formulario">
-            <h2>Digite o código de verificação enviado</h2>
-
-            <div className="code-inputs">
-            {[...Array(6)].map((_, i) => (
-                <input key={i} type="text" maxLength="1" />
-            ))}
+            <div className="banner">
+                <img className="banner_image" src="/images/Código de verificação.png" alt="Imagem de Código de Verificação" />
             </div>
 
-            <button className="btn-enviar">Enviar</button>
+            <div className="esqueceu-senha-2-formulario">
+                <h2>Digite o código de verificação enviado</h2>
 
-            <div className="resend-section">
-            <p className="text-info">Não recebeu o código?</p>
-            <p className="text-link">Reenviar código de verificação</p>
+                <div className="code-inputs">
+                {[...Array(6)].map((_, i) => (
+                    <input key={i} type="text" maxLength="1" />
+                ))}
+                </div>
+
+                <button className="btn-enviar" onClick={handleNextStep}>Enviar</button>
+
+                <div className="resend-section">
+                <p className="text-info">Não recebeu o código?</p>
+                <p className="text-link">Reenviar código de verificação</p>
+                </div>
             </div>
-        </div>
 
-        <Footer />
-    </div>
-  );
+            <Footer />
+        </div>
+    );
 };
 
 export default EsqueceuSenha2;
