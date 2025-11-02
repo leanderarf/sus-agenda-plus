@@ -5,6 +5,9 @@ import Header from "../componentes/header";
 import Footer from "../componentes/footer";
 
 const CadastroPaciente = () => {
+    // Obtém usuários existentes ou cria um array vazio
+    const usuariosExistentes = JSON.parse(localStorage.getItem("usuarios")) || [];
+
     const navigate = useNavigate();
 
     const [formData, setFormData] = useState({
@@ -30,9 +33,11 @@ const CadastroPaciente = () => {
         confirmarSenha: "",
     });
 
+
     const handleChange = (e) => {
         const { name, value } = e.target;
-        setFormData({ ...formData, [name]: value });
+
+        setFormData({ ...formData, [name]: value });    
     };
 
     const handleSubmit = (e) => {
@@ -42,6 +47,12 @@ const CadastroPaciente = () => {
         alert("As senhas não coincidem!");
         return;
         }
+        // Adiciona o novo paciente ao array
+        usuariosExistentes.push(formData);
+
+        // Salva novamente no localStorage
+        localStorage.setItem("usuarios", JSON.stringify(usuariosExistentes));
+
 
         console.log("Dados cadastrados:", formData);
         alert("Cadastro realizado com sucesso!");
@@ -67,11 +78,11 @@ const CadastroPaciente = () => {
             </h2>
 
             <input
-            type="text"
-            name="nome"
-            placeholder="Nome completo"
-            value={formData.nome}
-            onChange={handleChange}
+                type="text"
+                name="nome"
+                placeholder="Nome completo"
+                value={formData.nome}
+                onChange={handleChange}
             />
 
             <div className="duo-input">
@@ -170,11 +181,11 @@ const CadastroPaciente = () => {
             </div>
 
             <input
-            type="text"
-            name="cep"
-            placeholder="CEP"
-            value={formData.cep}
-            onChange={handleChange}
+                type="text"
+                name="cep"
+                placeholder="CEP"
+                value={formData.cep}
+                onChange={handleChange}
             />
 
             {/* Contato */}
@@ -185,11 +196,11 @@ const CadastroPaciente = () => {
             </h2>
 
             <input
-            type="email"
-            name="email"
-            placeholder="E-mail"
-            value={formData.email}
-            onChange={handleChange}
+                type="email"
+                name="email"
+                placeholder="E-mail"
+                value={formData.email}
+                onChange={handleChange}
             />
 
             <div className="duo-input">
@@ -233,11 +244,11 @@ const CadastroPaciente = () => {
                 </span>
             </h2>
             <input
-            type="text"
-            name="carteirinha"
-            placeholder="Número da carteirinha"
-            value={formData.carteirinha}
-            onChange={handleChange}
+                type="text"
+                name="carteirinha"
+                placeholder="Número da carteirinha"
+                value={formData.carteirinha}
+                onChange={handleChange}
             />
 
             {/* Credenciais */}
