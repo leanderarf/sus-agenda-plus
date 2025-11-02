@@ -5,12 +5,13 @@ import EsqueceuSenha1 from './pages/esqueceuSenha1';
 import EsqueceuSenha2 from './pages/esqueceuSenha2';
 import EsqueceuSenha3 from './pages/esqueceuSenha3';
 import CadastroPaciente from './pages/cadastroPaciente';
+import Agendamento from './pages/agendamento';
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Agendamento />} />
         <Route path="/login" element={<Login />} /> 
         <Route path="/esqueceuSenha1" element={<EsqueceuSenha1 />} /> 
         <Route path="/esqueceuSenha2" element={<EsqueceuSenha2 />} /> 
