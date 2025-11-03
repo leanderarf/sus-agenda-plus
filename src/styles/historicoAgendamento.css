@@ -1,0 +1,150 @@
+.historico-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: var(--fonte-principal);
+    background-color: var(--cor-de-fundo-secundária);
+    color: var(--texto-título);
+    margin: 12px 10px;
+}
+
+.banner {
+    margin: 0;
+    padding: 0;
+}
+
+.banner-image {
+    width: 100%;
+    height: auto;
+    
+}
+
+.filtro-form {
+    width: 90%;
+    margin-top: 40px;
+    border: 1px solid var(--caixa-de-texto);
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.filtros-linha {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.campo-select,
+.campo-input {
+    flex: 1;
+    min-width: 150px;
+    padding: 12px;
+    border: 1px solid var(--caixa-de-texto);
+    border-radius: 8px;
+    font-size: 14px;
+    color: var(--texto-título);
+}
+
+.campo-select::placeholder{
+    color: var(--texto-título);
+
+}
+
+.btn-consultar {
+    background-color: var(--texto-título);
+    color: var(--cor-de-fundo-secundária);
+    border: none;
+    border-radius: 25px;
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    transition: 0.3s ease;
+    font-family: var(--fonte-principal);
+}
+
+.btn-consultar:hover {
+    background-color: var(--texto-título);
+}
+
+.resultados {
+    width: 90%;
+    margin-top: 40px;
+    margin-bottom: 60px;
+}
+
+.resultados h3 {
+    font-size: 22px;
+    color: var(--texto-título);
+    margin-bottom: 20px;
+}
+
+.tabela-container {
+    width: 100%;
+    border: 1px solid var(--caixa-de-texto);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.tabela-agendamentos {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 14px;
+}
+
+.tabela-agendamentos th,
+.tabela-agendamentos td {
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--caixa-de-texto);
+}
+
+.tabela-agendamentos th {
+    background-color: var(--caixa-de-texto);
+    font-weight: 600;
+    color: var(--texto-título);
+    font-size: 8px;
+}
+
+.tabela-agendamentos td {
+    color: var(--texto-título);
+    font-family: var(--fonte-secundária);
+    font-weight: 400;
+}
+
+.sem-resultados {
+    text-align: start;
+    padding: 20px;
+    color: var(--texto-título);
+}
+
+.paginacao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+    gap: 6px;
+}
+
+.paginacao button {
+    background-color: var(--texto-título);
+    color: var(--cor-de-fundo-secundária);
+    border: none;
+    padding: 6px 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-weight: 600;
+    font-family: var(--fonte-principal);
+}
+
+.paginacao .ativo {
+    background-color: var(--cor-de-fundo-ícones);
+}
+
+.paginacao span {
+    color: var(--texto-título);
+    font-weight: 600;
+}

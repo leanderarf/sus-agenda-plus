@@ -55,7 +55,7 @@ const Inicio = () => {
                     <img src="/icons/reagendar.png" alt="Reagendar/Cancelar" />
                 </div>
                 <h4>Reagendar/Cancelar</h4>
-                <a href="#">Acessar</a>
+                <a href="/historico">Acessar</a>
                 </div>
 
                 <div className="opcao-card">
@@ -63,7 +63,7 @@ const Inicio = () => {
                     <img src="/icons/historico-agendamentos.png" alt="Histórico de Consultas" />
                 </div>
                 <h4>Histórico de Consultas</h4>
-                <a href="#">Acessar</a>
+                <a href="/historico">Acessar</a>
                 </div>
 
                 <div className="opcao-card">
