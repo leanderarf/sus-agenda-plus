@@ -6,6 +6,7 @@ import EsqueceuSenha2 from './pages/esqueceuSenha2';
 import EsqueceuSenha3 from './pages/esqueceuSenha3';
 import CadastroPaciente from './pages/cadastroPaciente';
 import Agendamento from './pages/agendamento';
+import Inicio from './pages/inicio';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/esqueceuSenha3" element={<EsqueceuSenha3 />} />
         <Route path="/cadastro" element={<CadastroPaciente />} />
         <Route path="/agendamento" element={<Agendamento />} />
+        <Route path="/inicio" element={<Inicio />} />
       </Routes>
     </Router>
   );
