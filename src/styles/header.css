@@ -1,56 +1,46 @@
 @import url("../styles/styles.css");
 
-/* Cabeçalho principal */
 header {
-  width: 428px; /* largura fixa da sua página */
+  width: 428px;
   background: var(--cor-de-fundo-primária);
   color: #006980;
-  height: 70px; /* altura ajustada */
-  margin: 0 auto; /* centraliza horizontalmente */
+  height: 70px;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
-/* Container do menu e ícones */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%; /* ocupa toda a largura do header */
+  width: 100%;
   padding: 0 16px;
 }
 
 ul {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    gap: 20px; /* espaço entre os itens */
-    margin: 0;
-    padding: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
 }
 
-/* Lado esquerdo (menu + logo) */
 .menu-icon {
   display: flex;
   align-items: center;
-  gap: 5px; /* espaço entre menu e logo */
+  gap: 5px;
 }
 
 .menu-icon-logo {
-    width: 52px;
-    height: 45px;
-    
+  width: 52px;
+  height: 45px;
 }
 
-/* Lado direito (notificação, calendário, usuário) */
-.user-icons {
-  display: flex;
-  align-items: center;
-  gap: 15px; /* espaço entre ícones */
-}
-
-/* Tamanho consistente dos ícones */
+/* Ícones */
 .menu-icon-menu,
 .user-icons img {
   width: 35px;
@@ -58,7 +48,48 @@ ul {
   cursor: pointer;
 }
 
-/* Ajuste opcional para responsividade */
+.user-icons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* MENU DROPDOWN */
+.menu-dropdown {
+  position: absolute;
+  top: 70px;
+  left: 0;
+  width: 250px;
+  background: #e9f8fb;
+  color: #003b4d;
+  box-shadow: 0 4px 10px rgba(0, 105, 128, 0.2);
+  border-radius: 0 0 8px 8px;
+  z-index: 10;
+  padding: 10px 0;
+}
+
+.menu-dropdown ul {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0;
+}
+
+.menu-dropdown li {
+  width: 100%;
+  padding: 12px 20px;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  color: #004c5f;
+  transition: background 0.2s;
+}
+
+.menu-dropdown li:hover {
+  background: #d0eef4;
+  color: #007c91;
+}
+
+/* RESPONSIVIDADE */
 @media (max-width: 428px) {
   header {
     width: 100%;

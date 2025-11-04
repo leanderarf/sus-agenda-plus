@@ -1,67 +1,92 @@
 import '../styles/header.css';
-import { useNavigate } from 'react-router-dom'; // 👈 1. Importar useNavigate
-import React from 'react'; // 👈 Garantir que o React esteja importado
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Header = () => {
-    const navigate = useNavigate(); // 👈 2. Inicializar o useNavigate
+    const navigate = useNavigate();
+    const [menuAberto, setMenuAberto] = useState(false);
 
-    // 3. Função para verificar o login e redirecionar
+    // Verificar login
+    const usuarioAtivo = JSON.parse(localStorage.getItem("usuarioAtivo"));
+
     const handleAgendamentoClick = (e) => {
-        // Previne a navegação padrão do <a> com href='#'
-        e.preventDefault(); 
-        
-        // Verifica se há um usuário ativo no localStorage
-        const usuarioAtivo = JSON.parse(localStorage.getItem("usuarioAtivo"));
-
+        e.preventDefault();
         if (usuarioAtivo && usuarioAtivo.cpf) {
-            // Se estiver logado, navega para a página de Agendamento
-            navigate('/agendamento'); 
+            navigate('/agendamento');
         } else {
-            // Se NÃO estiver logado, navega para a página de Login
             navigate('/login');
         }
     };
 
+    const handleHomeClick = () => {
+        if (usuarioAtivo && usuarioAtivo.cpf) {
+            navigate('/inicio');
+        }
+    };
+
     return (
-         <header>
+        <header>
             <nav className="navbar">
                 <ul className="menu-icon">
-                    <li>
-                        <a href='#'>
-                            <img className='menu-icon-menu' src='/icons/menu.png' alt="Menu Hamburguer SUS Agenda+" />                        
-                        </a>
+                    <li
+                        className="menu-hamburguer-area"
+                        onMouseEnter={() => setMenuAberto(true)}
+                        onMouseLeave={() => setMenuAberto(false)}
+                    >
+                        <img
+                            className="menu-icon-menu"
+                            src="/icons/menu.png"
+                            alt="Menu SUS Agenda+"
+                        />
+
+                        {menuAberto && (
+                            <div className="menu-dropdown">
+                                <ul>
+                                    <li onClick={() => navigate('/login')}>LOGIN</li>
+                                    <li onClick={handleAgendamentoClick}>AGENDAR CONSULTA</li>
+                                    <li onClick={() => navigate('/unidades')}>UNIDADES PRÓXIMAS</li>
+                                    <li onClick={() => navigate('/historico')}>HISTÓRICO DE AGENDAMENTOS</li>
+                                    <li onClick={() => navigate('/faq')}>PERGUNTAS FREQUENTES</li>
+                                    <li onClick={() => navigate('/faq')}>CONTATO</li>
+                                </ul>
+                            </div>
+                        )}
                     </li>
                     <li>
-                        <a href='#'>
-                            <img className='menu-icon-logo'src='/icons/logo-menu.png' alt="Logo SUS Agenda+" />
+                        <a href="#" onClick={() => navigate('/inicio')}>
+                            <img className="menu-icon-logo" src="/icons/logo-menu.png" alt="Logo SUS Agenda+" />
                         </a>
                     </li>
                 </ul>
+
                 <ul className="user-icons">
                     <li>
-                        <a href='#'>
-                            <img className="notificacao" src='/icons/notificacao.png' alt="Minhas notificações" />
-                        </a>
-                    </li>
-                    {/* 4. APLICAÇÃO DO HANDLER NO ÍCONE DE AGENDAMENTO */}
-                    <li onClick={handleAgendamentoClick}> 
-                        <a href='#'> 
-                            <img 
-                                className ="agendamentos" 
-                                src='/icons/agendamentos.png' 
-                                alt="Meus agendamentos" 
-                            />
-                        </a>
+                        <img
+                            className="home-icon"
+                            src="/icons/home.png"
+                            alt="Início"
+                            onClick={handleHomeClick}
+                            style={{ cursor: usuarioAtivo ? 'pointer' : 'not-allowed', opacity: usuarioAtivo ? 1 : 0.6 }}
+                        />
                     </li>
                     <li>
-                        <a href='/login'>
-                            <img className="usuario" src='/icons/usuario-menu.png' alt="Usuário" />
-                        </a>
+                        <img className="notificacao" src="/icons/notificacao.png" alt="Notificações" />
+                    </li>
+                    <li onClick={handleAgendamentoClick}>
+                        <img className="agendamentos" src="/icons/agendamentos.png" alt="Agendamentos" />
+                    </li>
+                    <li>
+                        <img
+                            className="usuario"
+                            src="/icons/usuario-menu.png"
+                            alt="Usuário"
+                            onClick={() => navigate('/login')}
+                        />
                     </li>
                 </ul>
             </nav>
         </header>
-    )
-}
+    );
+};
 
 export default Header;

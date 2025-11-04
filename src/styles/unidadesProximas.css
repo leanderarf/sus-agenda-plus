@@ -35,7 +35,7 @@
     padding: 0 16px 0 0;
 }
 
-.banner p {
+.hero p {
     font-size: 12px;
     margin-top: 10px;
     line-height: 1.05;
@@ -44,7 +44,7 @@
     width: 75%;
 }
 
-.banner img {
+.hero img {
     width: 187px;
     height: auto;
     margin-left: 240px;
