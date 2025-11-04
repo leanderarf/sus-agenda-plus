@@ -79,7 +79,7 @@ const Inicio = () => {
                     <img src="/icons/perguntas-frequentes.png" alt="Dúvidas Frequentes" />
                 </div>
                 <h4>Dúvidas Frequentes</h4>
-                <a href="#">Acessar</a>
+                <a href="/faq">Acessar</a>
                 </div>
             </section>
 

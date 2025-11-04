@@ -9,6 +9,7 @@ import Agendamento from './pages/agendamento';
 import Inicio from './pages/inicio';
 import HistoricoAgendamento from './pages/historicoAgendamento';
 import UnidadesProximas from './pages/unidadesProximas';
+import Faq from './pages/faq';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="/inicio" element={<Inicio />} />
         <Route path="/historico" element={<HistoricoAgendamento />} />
         <Route path="/unidades" element={<UnidadesProximas />} />
+        <Route path="/faq" element={<Faq />} />
       </Routes>
     </Router>
   );

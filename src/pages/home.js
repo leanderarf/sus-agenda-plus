@@ -199,7 +199,7 @@ const Home = () => {
                     <img className="banner_image" src="/images/Home_Banner.png" alt="Banner SUS Agenda+" />
                     <a className="banner_button" href="#">Agendar Agora</a>
                 </div>
-                <div className="faq">
+                <div className="faq_home">
                 <h2 className="faq_titulo">FAQ</h2>
                 
                 {faqData.map((item, index) => (
