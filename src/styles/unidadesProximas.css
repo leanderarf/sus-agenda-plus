@@ -1,0 +1,199 @@
+.unidades-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: var(--fonte-principal);
+    background-color: var(--cor-de-fundo-secundária);
+    color: var(--texto-título);
+}
+
+.banner {
+    margin: 0;
+    background-color: var(--cor-de-fundo-terciária);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: flex-start;
+    position: relative;
+    display: block;
+}
+
+.banner-text {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 16px;
+    width: 68%;
+    z-index: 10;
+}
+
+.banner h1 {
+    font-size: 27px;
+    font-weight: 600;
+    margin-top: 20px;
+    line-height: 1.05;
+    padding: 0 16px 0 0;
+}
+
+.banner p {
+    font-size: 12px;
+    margin-top: 10px;
+    line-height: 1.05;
+    font-family: var(--fonte-secundária);
+    padding: 0 12px 0 0;
+    width: 75%;
+}
+
+.banner img {
+    width: 187px;
+    height: auto;
+    margin-left: 240px;
+    margin-top: 45px;
+}
+
+
+.filtro-form {
+    width: 85%;
+    margin-top: 35px;
+    background-color: var(--cor-de-fundo-secundária);
+    border: 1px solid var(--caixa-de-texto);
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.filtros-linha {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.campo-input,
+.campo-select {
+    flex: 1;
+    min-width: 100px;
+    padding: 12px;
+    border: 1px solid #b6b6b6;
+    border-radius: 8px;
+    font-size: 12px;
+    color: var(--texto-título);
+    font-weight: 500;
+    font-family: var(--fonte-secundária);
+}
+
+.campo-input::placeholder {
+    color: var(--texto-título);
+}
+
+.btn-consultar {
+    background-color: var(--texto-título);
+    color: var(--cor-de-fundo-secundária);
+    border: none;
+    border-radius: 25px;
+    padding: 12px 35px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    transition: 0.3s ease;
+}
+
+.btn-consultar:hover {
+    background-color: var(--texto-título);
+    opacity: 65%;
+}
+
+.resultados {
+    width: 90%;
+    margin-top: 40px;
+    margin-bottom: 60px;
+}
+
+.resultados h3 {
+    font-size: 22px;
+    color: var(--texto-título);
+    padding-left: 2px;
+    margin-bottom: 20px;
+}
+
+.cards-resultados {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.card-resultado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--cor-de-fundo-secundária);
+    border: 1px solid var(--caixa-de-texto);
+    border-radius: 12px;
+    padding: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.card-resultado h4 {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--texto-título);
+    font-family: var(--fonte-secundária);
+    font-weight: 500;
+}
+
+.card-resultado p {
+    font-size: 14px;
+    color: var(--texto-título);
+    font-family: var(--fonte-secundária);
+    font-weight: 400;
+}
+
+.card-resultado .especialidade {
+    margin-top: 4px;
+}
+
+.btn-agendar {
+    background-color: var(--texto-título);
+    color: var(--cor-de-fundo-secundária);
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.btn-agendar:hover {
+    background-color: var(--texto-título);
+    opacity: 65%;
+}
+
+.paginacao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+    gap: 6px;
+}
+
+.paginacao button {
+    background-color: var(--texto-título);
+    color: var(--cor-de-fundo-secundária);
+    border: none;
+    padding: 6px 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-weight: 600;
+    font-family: var(--fonte-principal);
+}
+
+.paginacao .ativo {
+    background-color: var(--cor-de-fundo-ícones);
+}
+
+.paginacao span {
+    color: var(--texto-título);
+    font-weight: 600;
+}

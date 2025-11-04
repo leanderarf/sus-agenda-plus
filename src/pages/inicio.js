@@ -71,7 +71,7 @@ const Inicio = () => {
                     <img src="/icons/unidades-proximas.png" alt="Unidades Próximas" />
                 </div>
                 <h4>Unidades Próximas</h4>
-                <a href="#">Acessar</a>
+                <a href="/unidades">Acessar</a>
                 </div>
 
                 <div className="card-duvidas">
