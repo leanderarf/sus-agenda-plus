@@ -1,73 +1,171 @@
-# Getting Started with Create React App
+# 🏥 SUS Agenda Plus
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Sistema de Agendamento Prévio do SUS/UPA**  
+Projeto de Extensão Universitária — Universidade Paulista (UNIP)
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 📘 Apresentação
 
-### `npm start`
+O **SUS Agenda Plus** é uma aplicação web desenvolvida como **projeto de extensão universitária** no curso de **Análise e Desenvolvimento de Sistemas (ADS)** da **Universidade Paulista – UNIP**.  
+Seu objetivo é **modernizar o processo de agendamento de consultas e exames** nas unidades públicas de saúde (SUS), promovendo **acessibilidade, eficiência e transparência** no atendimento à população.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Este projeto aplica conhecimentos acadêmicos em prol da sociedade, articulando **tecnologia, responsabilidade social e cidadania**, conforme os princípios da **Resolução CNE/CES nº 7/2018** e do **Regulamento de Extensão da UNIP**.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 🌍 Acesso ao Sistema
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+🔗 **Aplicação hospedada:** [https://sus-agenda-plus.vercel.app/](https://sus-agenda-plus.vercel.app/)  
+📂 **Repositório no GitHub:** [github.com/leanderarf/sus-agenda-plus](https://github.com/leanderarf/sus-agenda-plus)
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 💡 Objetivo Geral
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Desenvolver uma plataforma digital que permita aos cidadãos **agendar, reagendar e acompanhar consultas e exames** de forma simples, rápida e transparente, **reduzindo filas, tempo de espera e deslocamentos desnecessários**.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## ⚙️ Principais Funcionalidades
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- 🗓️ **Agendamento online:** seleção de data, horário e unidade de saúde disponíveis.  
+- 🔁 **Cancelamento e reagendamento automático:** evita desperdício de vagas e melhora o aproveitamento do sistema.  
+- 🔔 **Notificações e lembretes:** alerta o usuário sobre consultas futuras e reagendamentos.  
+- 📚 **Histórico de atendimentos:** permite visualizar consultas e exames realizados.  
+- 👨‍⚕️ **Cadastro de pacientes e profissionais:** controle seguro de perfis e permissões.  
+- 🧭 **Consulta de unidades próximas:** busca por localidade e especialidade médica.  
+- 💬 **FAQ (Dúvidas Frequentes):** página informativa para suporte ao usuário.  
+- 🧾 **Painel administrativo:** acesso para gestores e profissionais de saúde com relatórios e controle de agendamentos.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 🧩 Tecnologias Utilizadas
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+**Frontend:**
+- React.js  
+- HTML5, CSS3 e JavaScript ES6  
+- Bootstrap  
+- Responsividade (design adaptável para desktop, tablet e celular)
 
-## Learn More
+**Backend:**
+- Node.js / Express (API simulada em ambiente local)
+- Integração futura com banco de dados PostgreSQL
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+**Hospedagem:**
+- Vercel (deploy contínuo via GitHub)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+## 🧱 Estrutura de Pastas
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```bash
+src/
+├── components/       # Componentes reutilizáveis (Header, Footer, Cards, etc.)
+├── pages/            # Telas principais (Login, Agendamento, Histórico, FAQ)
+├── assets/           # Ícones, imagens e logos
+├── services/         # Conexão com API e manipulação de dados
+├── App.js            # Roteamento e estrutura principal
+└── index.js          # Ponto de entrada da aplicação
 
-### Analyzing the Bundle Size
+```
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 🧑‍💻 Perfis de Usuário
 
-### Making a Progressive Web App
+- Paciente: realiza cadastro, agenda consultas, visualiza histórico e recebe notificações.
+- Profissional de Saúde: gerencia agenda e confirma atendimentos.
+- Administrador: possui controle total sobre cadastros e configurações do sistema.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
+## 🌱 Impacto Social e Comunitário
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+O SUS Agenda Plus é um exemplo prático de como a tecnologia pode gerar impacto social positivo, ampliando o acesso à saúde pública e à inclusão digital.
 
-### Deployment
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 🌎 Alinhamento com os Objetivos de Desenvolvimento Sustentável (ODS) da ONU:
 
-### `npm run build` fails to minify
+- ODS 3 – Saúde e bem-estar
+- ODS 9 – Inovação e infraestrutura
+- ODS 10 – Redução das desigualdades
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# Benefícios Sociais:
 
-# sus-agenda-plus
-Sistema de Agendamento Prrévio do SUS/UPA para fins acadêmicos
+- Redução de filas e tempo de espera em unidades públicas.
+- Melhoria na gestão de recursos humanos e materiais.
+- Aumento da transparência e eficiência dos serviços de saúde.
+- Inclusão digital de comunidades com baixa familiaridade tecnológica.
+
+---
+
+## 🎓 Benefícios Acadêmicos e Extensionistas
+
+De acordo com o Regulamento das Atividades de Extensão da UNIP, este projeto:
+
+- Promove integração entre ensino, pesquisa e comunidade.
+- Desenvolve responsabilidade ética, social e tecnológica.
+- Estimula competências como liderança, empatia e inovação.
+- Contribui para o eixo Empregabilidade, ao fortalecer habilidades práticas e de mercado.
+
+---
+
+## ⚙️ Como Executar o Projeto Localmente
+1️⃣ Clonar o repositório
+```bash
+git clone https://github.com/leanderarf/projeto-organo.git
+```
+2️⃣ Acessar o diretório do projeto
+```bash
+cd projeto-organo
+```
+3️⃣ Instalar as dependências
+```bash
+npm install
+```
+4️⃣ Rodar o projeto
+```bash
+npm run dev
+```
+O projeto será iniciado em http://localhost:5173/ (ou porta semelhante).
+
+---
+
+## 🌐 Deploy
+
+O projeto está hospedado na plataforma Vercel, que permite deploy contínuo a partir do GitHub.
+
+---
+
+## 📱 Demonstração Página Inicial
+
+<img width="854" height="3186" alt="Home" src="https://github.com/user-attachments/assets/1c57f87b-4f4c-4494-8108-d97d86a11a07" />
+
+---
+
+## 🔐 Requisitos Técnicos e Boas Práticas
+
+- Código organizado e modularizado.
+- Controle de acesso baseado em perfis.
+- Validação de formulários e dados obrigatórios.
+- Responsividade e acessibilidade em todas as telas.
+- Estrutura preparada para futura integração com banco de dados e autenticação real (JWT/OAuth).
+
+---
+
+## 🧾 Licença
+
+Este projeto foi desenvolvido com finalidade acadêmica e extensionista sob orientação da Universidade Paulista (UNIP), respeitando os princípios de ética, solidariedade e responsabilidade social.
+
+---
+
+## ✉️ Contato
+
+Desenvolvido por Leander Arf
+📧 arfleander10@gmail.com
+🌐 GitHub - leanderarf
+
+---
+
+>“Mais do que um projeto acadêmico, o SUS Agenda Plus é uma ponte entre tecnologia e cidadania, devolvendo à sociedade o conhecimento produzido na universidade.”
