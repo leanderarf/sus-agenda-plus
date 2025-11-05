@@ -7,11 +7,11 @@
     color: var(--texto-título);
 }
 
-.banner {
+.banner-inicio {
     margin: 0;
 }
 
-.banner-image {
+.image-inicio {
     width: 100%;
     height: auto;
 }
@@ -19,9 +19,9 @@
 .btn-agendar {
     width: 135px;
     height: 30px;
-    position: absolute; /* <--- Essencial para sobrepor */
-    top: 160px; /* <--- Ajuste este valor em PX */
-    left: 22px; /* <--- Ajuste este valor em PX */
+    position: absolute;
+    top: 160px;
+    left: 22px;
     padding: 0;
     background-color: #359BC4;
     color: var(--cor-de-fundo-secundária);
@@ -34,7 +34,7 @@
     font-family: var(--fonte-principal);
     text-decoration: none;
     font-weight: 500;
-    z-index: 2; /* Garante que o botão fique acima da imagem */
+    z-index: 2;
 }
 
 .btn-agendar:hover {
@@ -45,7 +45,6 @@
     width: 280px;
 }
 
-/* Saudação */
 .saudacao {
     width: 90%;
     margin-top: 40px;
@@ -61,7 +60,6 @@
     color: var(--texto-título);
 }
 
-/* Opções principais */
 .opcoes-container {
     display: grid;
     width: 80%;
@@ -115,7 +113,7 @@
     font-family: var(--fonte-principal);
 }
 
-.card-duvidas{
+.card-duvidas {
     background-color: var(--cor-de-fundo-secundária);
     border: 1px solid var(--caixa-de-texto);
     border-radius: 12px;
@@ -129,7 +127,7 @@
     color: var(--texto-título);
 }
 
-.card-duvidas .icon img{
+.card-duvidas .icon img {
     width: 35px;
     height: auto;
     margin-bottom: 8px;
@@ -164,7 +162,7 @@
     background-color: var(--ícone-header);
 }
 
-/* Mensagem final */
+
 .mensagem-final {
     width: 90%;
     margin-top: 40px;
@@ -189,4 +187,3 @@
     color: var(--texto-título);
     line-height: 1.5;
 }
-

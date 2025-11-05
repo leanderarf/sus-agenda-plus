@@ -7,18 +7,16 @@
   padding-bottom: 50px;
 }
 
-/* Banner */
-.banner-image {
-    width: 100%;
-    height: auto;    
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    
+.banner-image-esqueceu3 {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
 }
 
-/* Conteúdo */
 .esqueceu-senha-3-formulario {
   width: 85%;
   margin-top: 40px;
@@ -54,7 +52,6 @@
   border: 2px solid var(--ícone-header);
 }
 
-/* Botão */
 .btn-redefinir {
   width: 100%;
   background-color: var(--botao);

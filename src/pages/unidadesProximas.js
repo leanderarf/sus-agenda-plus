@@ -21,13 +21,13 @@ const UnidadesProximas = () => {
         const usuario = JSON.parse(localStorage.getItem("usuarioAtivo"));
         setUsuarioAtivo(usuario);
 
-        // Simulação: busca dados armazenados de unidades e profissionais
+        
         const profs = JSON.parse(localStorage.getItem("profissionais")) || [];
         const unid = JSON.parse(localStorage.getItem("unidades")) || [];
 
         setProfissionais(profs);
         setUnidades(unid);
-        setResultados([...unid, ...profs]); // exibe tudo inicialmente
+        setResultados([...unid, ...profs]); 
     }, []);
 
     const handleChange = (e) => {
@@ -38,46 +38,46 @@ const UnidadesProximas = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-    // Filtro básico (simulado)
-    const todosResultados = [...unidades, ...profissionais];
-    const filtrados = todosResultados.filter((item) => {
-        const matchUnidade = filtros.unidade
-        ? item.nome?.toLowerCase().includes(filtros.unidade.toLowerCase())
-        : true;
-        const matchCidade = filtros.cidade
-        ? item.cidade?.toLowerCase().includes(filtros.cidade.toLowerCase())
-        : true;
-        const matchBairro = filtros.bairro
-        ? item.bairro?.toLowerCase().includes(filtros.bairro.toLowerCase())
-        : true;
-        const matchEspecialidade = filtros.especialidade
-        ? item.especialidade?.toLowerCase().includes(filtros.especialidade.toLowerCase())
-        : true;
-        const matchRua = filtros.rua
-        ? item.rua?.toLowerCase().includes(filtros.rua.toLowerCase())
-        : true;
-        const matchCep = filtros.cep
-        ? item.cep?.toLowerCase().includes(filtros.cep.toLowerCase())
-        : true;
+        
+        const todosResultados = [...unidades, ...profissionais];
+        const filtrados = todosResultados.filter((item) => {
+            const matchUnidade = filtros.unidade
+                ? item.nome?.toLowerCase().includes(filtros.unidade.toLowerCase())
+                : true;
+            const matchCidade = filtros.cidade
+                ? item.cidade?.toLowerCase().includes(filtros.cidade.toLowerCase())
+                : true;
+            const matchBairro = filtros.bairro
+                ? item.bairro?.toLowerCase().includes(filtros.bairro.toLowerCase())
+                : true;
+            const matchEspecialidade = filtros.especialidade
+                ? item.especialidade?.toLowerCase().includes(filtros.especialidade.toLowerCase())
+                : true;
+            const matchRua = filtros.rua
+                ? item.rua?.toLowerCase().includes(filtros.rua.toLowerCase())
+                : true;
+            const matchCep = filtros.cep
+                ? item.cep?.toLowerCase().includes(filtros.cep.toLowerCase())
+                : true;
 
-        return (
-        matchUnidade &&
-        matchCidade &&
-        matchBairro &&
-        matchEspecialidade &&
-        matchRua &&
-        matchCep
-        );
-    });
+            return (
+                matchUnidade &&
+                matchCidade &&
+                matchBairro &&
+                matchEspecialidade &&
+                matchRua &&
+                matchCep
+            );
+        });
 
-    setResultados(filtrados);
+        setResultados(filtrados);
     };
 
     return (
-    <section className="unidades-proximas">
-        <Header />
+        <section className="unidades-proximas">
+            <Header />
             <div className="unidades-container">
-                <div className="banner">  
+                <div className="banner-unidades">
                     <div className="banner-text">
                         <h1>Unidades Próximas e Profissionais Disponíveis</h1>
                         <p>Encontre o atendimento mais próxima e adequado as suas necessidades de saúde</p>
@@ -109,7 +109,7 @@ const UnidadesProximas = () => {
                     </div>
 
                     <div className="filtros-linha">
-                            <input
+                        <input
                             type="text"
                             name="bairro"
                             value={filtros.bairro}
@@ -161,29 +161,28 @@ const UnidadesProximas = () => {
 
                     <div className="cards-resultados">
                         {resultados.length > 0 ? (
-                        resultados.map((item, index) => (
-                            <div key={index} className="card-resultado">
-                            <div className="info">
-                                <h4>{item.nome || item.profissional}</h4>
-                                <p>
-                                {item.endereco ||
-                                    `${item.rua || ""}, ${item.numero || ""} - ${
-                                    item.bairro || ""
-                                    }, ${item.cidade || ""}`}
-                                </p>
-                                {item.especialidade && (
-                                <p className="especialidade">
-                                    <strong>Especialidade:</strong> {item.especialidade}
-                                </p>
-                                )}
-                            </div>
-                            <button className="btn-agendar" onClick={() => alert("Agendar consulta")}>
-                                Agendar
-                            </button>
-                            </div>
-                        ))
+                            resultados.map((item, index) => (
+                                <div key={index} className="card-resultado">
+                                    <div className="info">
+                                        <h4>{item.nome || item.profissional}</h4>
+                                        <p>
+                                            {item.endereco ||
+                                                `${item.rua || ""}, ${item.numero || ""} - ${item.bairro || ""
+                                                }, ${item.cidade || ""}`}
+                                        </p>
+                                        {item.especialidade && (
+                                            <p className="especialidade">
+                                                <strong>Especialidade:</strong> {item.especialidade}
+                                            </p>
+                                        )}
+                                    </div>
+                                    <button className="btn-agendar" onClick={() => alert("Agendar consulta")}>
+                                        Agendar
+                                    </button>
+                                </div>
+                            ))
                         ) : (
-                        <p className="sem-resultados">Nenhum resultado encontrado</p>
+                            <p className="sem-resultados">Nenhum resultado encontrado</p>
                         )}
                     </div>
 

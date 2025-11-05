@@ -11,59 +11,59 @@ const EsqueceuSenha1 = () => {
 
   const handleNextStep = (e) => {
     e.preventDefault();
-    navigate("/esqueceuSenha2"); // rota da próxima tela
+    navigate("/esqueceuSenha2");
   };
 
   return (
     <div className="esqueceu-container">
-        <Header />
-        <div className="banner">
-            <img className="banner_image" src="/images/Esqueceu Senha.png" alt="Imagem de Esqueceu a Senha" />
-        </div>
+      <Header />
+      <div className="banner-esqueceu1">
+        <img className="banner_image" src="/images/Esqueceu Senha.png" alt="Imagem de Esqueceu a Senha" />
+      </div>
 
-        <div className="formulario">
-            <label htmlFor="email" className="label">
-            Email
-            </label>
+      <div className="formulario">
+        <label htmlFor="email" className="label">
+          Email
+        </label>
+        <input
+          type="text"
+          id="email"
+          className="input"
+          placeholder="Digite seu e-mail ou CPF"
+        />
+
+        <p className="texto-opcao">
+          Deseja recuperar a senha via SMS ou e-mail?
+        </p>
+
+        <div className="radio-grupo">
+          <label className="radio">
             <input
-            type="text"
-            id="email"
-            className="input"
-            placeholder="Digite seu e-mail ou CPF"
+              type="radio"
+              value="email"
+              checked={metodo === "email"}
+              onChange={(e) => setMetodo(e.target.value)}
             />
+            <span>Email</span>
+          </label>
 
-            <p className="texto-opcao">
-            Deseja recuperar a senha via SMS ou e-mail?
-            </p>
-
-            <div className="radio-grupo">
-            <label className="radio">
-                <input
-                type="radio"
-                value="email"
-                checked={metodo === "email"}
-                onChange={(e) => setMetodo(e.target.value)}
-                />
-                <span>Email</span>
-            </label>
-
-            <label className="radio">
-                <input
-                type="radio"
-                value="sms"
-                checked={metodo === "sms"}
-                onChange={(e) => setMetodo(e.target.value)}
-                />
-                <span>SMS</span>
-            </label>
-            </div>
-
-            <button type="submit" className="botao-enviar" onClick={handleNextStep}>
-            Enviar
-            </button>
+          <label className="radio">
+            <input
+              type="radio"
+              value="sms"
+              checked={metodo === "sms"}
+              onChange={(e) => setMetodo(e.target.value)}
+            />
+            <span>SMS</span>
+          </label>
         </div>
 
-        <Footer />
+        <button type="submit" className="botao-enviar" onClick={handleNextStep}>
+          Enviar
+        </button>
+      </div>
+
+      <Footer />
     </div>
   );
 };

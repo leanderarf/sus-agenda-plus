@@ -1,4 +1,4 @@
-.agendamento-page{
+.agendamento-page {
     font-family: var(--fonte-principal);
     color: var(--texto-título);
     background-color: var(--cor-de-fundo-secundária);
@@ -9,191 +9,185 @@
     flex-direction: column;
 }
 
-/* HERO */
-.agendamento-hero{
-    display:flex;
-    gap:20px;
-    align-items:center;
-    justify-content:space-between;
-    width:100%;
-    max-width:400px;
-    margin:30px auto;
+.agendamento-hero {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 400px;
+    margin: 30px auto;
 }
 
-.agendamento-text h1{
+.agendamento-text h1 {
     font-size: 25px;
-    margin:0;
-    line-height:1.05;
-    color:var(--dark-blue);
+    margin: 0;
+    line-height: 1.05;
+    color: var(--dark-blue);
 }
 
-.agendamento-text p{
-    margin:12px 0 18px 0;
+.agendamento-text p {
+    margin: 12px 0 18px 0;
     font-weight: 300;
     font-size: 11px;
 }
 
-.btn-disponibilidade{
-    background:var(--texto-título);
+.btn-disponibilidade {
+    background: var(--texto-título);
     color: var(--cor-de-fundo-secundária);
-    border:none;
+    border: none;
     padding: 15px 10px;
-    border-radius:20px;
-    cursor:pointer;
-    font-weight:600;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
     font-size: 12px;
     font-family: var(--fonte-principal);
 }
 
-.banner {
+.banner-agendamento {
     bottom: 10px;
 }
 
-.banner-image {
+.image-agendamento {
     width: 100%;
     height: auto;
 }
 
-/* form card */
-.agendamento-form-wrapper{
+.agendamento-form-wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
-    width:90%;
+    width: 90%;
     max-width: 900px;
-    border-radius:12px;
-    border:1px solid var(--caixa-de-texto);
-    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+    border-radius: 12px;
+    border: 1px solid var(--caixa-de-texto);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
     padding: 20px;
 }
 
 .agendamento-form {
-    display:flex;
-    flex-direction:column;
-    color:var(--texto-título);
+    display: flex;
+    flex-direction: column;
+    color: var(--texto-título);
 }
 
-.row{
-    display:flex;
-    gap:12px;
+.row {
+    display: flex;
+    gap: 12px;
 }
 
 .row input,
 .row select {
-    flex:1;
-    padding:12px;
+    flex: 1;
+    padding: 12px;
     margin: 12px 0;
-    border-radius:10px;
-    border:1px solid var(--caixa-de-texto);
+    border-radius: 10px;
+    border: 1px solid var(--caixa-de-texto);
     font-size: 14px;
     font-family: var(--fonte-secundária);
 }
 
-.row input::placeholder, 
-.opcao{
-    color:var(--texto-título);
+.row input::placeholder,
+.opcao {
+    color: var(--texto-título);
 }
 
-/* disponibilidade radios */
-.disponibilidade{
-    border-radius:8px;
-    padding:10px;
-    border:1px solid var(--caixa-de-texto);
-    align-items:center;
+.disponibilidade {
+    border-radius: 8px;
+    padding: 10px;
+    border: 1px solid var(--caixa-de-texto);
+    align-items: center;
 }
 
-.disponibilidade label{
-    margin-right:18px;
-    display:inline-flex;
-    gap:8px;
-    align-items:center;
-    color:var(--texto-título);
-    font-weight:600;
+.disponibilidade label {
+    margin-right: 18px;
+    display: inline-flex;
+    gap: 8px;
+    align-items: center;
+    color: var(--texto-título);
+    font-weight: 600;
     font-size: 12px;
     font-family: var(--fonte-secundária);
 }
 
-    /* botão consultar */
-.btn-consultar{
-    align-self:center;
-    width:50%;
-    max-width:320px;
-    background:var(--texto-título);
-    color:var(--cor-de-fundo-secundária);
-    border:none;
-    padding:14px;
-    border-radius:28px;
-    cursor:pointer;
-    font-size:1.05rem;
-    font-weight:700;
+.btn-consultar {
+    align-self: center;
+    width: 50%;
+    max-width: 320px;
+    background: var(--texto-título);
+    color: var(--cor-de-fundo-secundária);
+    border: none;
+    padding: 14px;
+    border-radius: 28px;
+    cursor: pointer;
+    font-size: 1.05rem;
+    font-weight: 700;
     margin: 18px 0 18px 0;
     font-family: var(--fonte-principal);
 }
 
-/* resultados */
-.agendamento-results{
-    width:90%;
-    max-width:980px;
-    margin:26px auto;
+.agendamento-results {
+    width: 90%;
+    max-width: 980px;
+    margin: 26px auto;
 }
 
-.agendamento-results h3{
-    color:var(--texto-título);
-    font-size:1.25rem;
-    margin-bottom:12px;
+.agendamento-results h3 {
+    color: var(--texto-título);
+    font-size: 1.25rem;
+    margin-bottom: 12px;
 }
 
-.no-results{
-    color:var(--caixa-de-texto);
-    padding:18px;
-    border-radius:10px;
-    border:1px dashed #e1e6e8;
-    background:#fbfcfd;
+.no-results {
+    color: var(--caixa-de-texto);
+    padding: 18px;
+    border-radius: 10px;
+    border: 1px dashed #e1e6e8;
+    background: #fbfcfd;
 }
 
-    /* cards */
-.cards{
-    display:flex;
-    flex-direction:column;
-    gap:14px;
+.cards {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
 }
 
-.card{
-    display:flex;
-    justify-content:space-between;
-    align-items:flex-start;
-    border-radius:10px;
-    padding:16px;
-    border:1px solid var(--texto-título);
+.card {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-radius: 10px;
+    padding: 16px;
+    border: 1px solid var(--texto-título);
 }
 
-.card-left { 
-    max-width:72%; 
+.card-left {
+    max-width: 72%;
 }
 
-.card-title{ 
-    color:var(--texto-título); 
-    font-size:1rem; 
-    display:block; 
+.card-title {
+    color: var(--texto-título);
+    font-size: 1rem;
+    display: block;
 }
 
-.card-address{ 
-    color:var(--texto-título); 
-    margin-top:6px; 
-    font-size:0.9rem; 
+.card-address {
+    color: var(--texto-título);
+    margin-top: 6px;
+    font-size: 0.9rem;
     font-family: var(--fonte-secundária);
 }
 
-.card-especialidade{ 
-    margin-top:10px; 
-    color: var(--texto-título); 
-    font-weight:600; 
-    font-size:0.95rem; 
+.card-especialidade {
+    margin-top: 10px;
+    color: var(--texto-título);
+    font-weight: 600;
+    font-size: 0.95rem;
     font-family: var(--fonte-secundária);
 }
 
-.card-right { 
-    text-align:right; 
-    color:var(--texto-título); 
-    font-weight:700; 
+.card-right {
+    text-align: right;
+    color: var(--texto-título);
+    font-weight: 700;
 }

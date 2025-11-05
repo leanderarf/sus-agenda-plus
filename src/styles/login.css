@@ -1,4 +1,3 @@
-/* Fundo geral */
 .login-container {
   display: flex;
   flex-direction: column;
@@ -8,7 +7,6 @@
   font-family: var(--fonte-principal);
 }
 
-/* Card central */
 .login-card {
   display: flex;
   flex-direction: column;
@@ -16,7 +14,6 @@
   margin-top: 40px;
 }
 
-/* Ícone de usuário */
 .login-user-icon {
   display: block;
   width: 120px;
@@ -49,7 +46,6 @@
   border-radius: 50% 50% 0 0;
 }
 
-/* Formulário */
 .login-form {
   width: 90%;
   max-width: 350px;
@@ -78,7 +74,6 @@
   opacity: 25%;
 }
 
-/* Checkbox */
 .login-checkbox {
   display: flex;
   align-items: center;
@@ -92,7 +87,6 @@
   cursor: pointer;
 }
 
-/* Botão Entrar */
 .login-button {
   background-color: var(--botao);
   color: var(--cor-de-fundo-secundária);
@@ -110,7 +104,6 @@
   background-color: var(--ícone-header);
 }
 
-/* Links inferiores */
 .login-links {
   display: flex;
   justify-content: space-between;

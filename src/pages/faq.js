@@ -15,7 +15,7 @@ const Faq = () => {
     });
 
     useEffect(() => {
-        // Carrega perguntas do localStorage ou usa padrão
+
         const faqs =
             JSON.parse(localStorage.getItem("faq")) || [
                 {

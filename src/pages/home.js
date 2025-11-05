@@ -11,14 +11,10 @@ const faqData = [
 ];
 
 const Home = () => {
-
-    // Estado para rastrear o item ativo (null, ou o índice do item aberto)
     const [activeIndex, setActiveIndex] = useState(null);
 
     const toggleAccordion = (index) => {
-    // Se o item clicado já estiver aberto, feche-o (seta para null)
-    // Caso contrário, abra-o (seta para o index clicado)
-    setActiveIndex(activeIndex === index ? null : index);
+        setActiveIndex(activeIndex === index ? null : index);
     };
 
     return (
@@ -27,9 +23,9 @@ const Home = () => {
             <Header/>
 
             <section className="home">
-            <div className="hero">
+            <div className="hero-home">
                 <img
-                className="hero_image"
+                className="image-home"
                 src="/images/Home.png"
                 alt="Banner Home SUS Agenda+"
                 />
@@ -195,7 +191,7 @@ const Home = () => {
                     </ul>
                     </div>
                 </div>
-                <div className="banner">
+                <div className="banner-home">
                     <img className="banner_image" src="/images/Home_Banner.png" alt="Banner SUS Agenda+" />
                     <a className="banner_button" href="#">Agendar Agora</a>
                 </div>
@@ -213,8 +209,6 @@ const Home = () => {
                         <div className={`faq_panel ${activeIndex === index ? 'open' : ''}`}>
                             <p>{item.answer}</p>
                         </div>
-                        {/* Para animação suave, você pode calcular o 'maxHeight' dinamicamente 
-                            em um Hook 'useEffect' e aplicá-lo ao estilo inline do div.faq_panel. */}
                     </React.Fragment>
                 ))}
                 </div>

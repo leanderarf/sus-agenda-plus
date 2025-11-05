@@ -7,17 +7,15 @@
   font-family: var(--fonte-principal);
 }
 
-/* Banner */
-.banner {
-    width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
+.banner-esqueceu1 {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
-/* Formulário */
 .formulario {
   width: 90%;
   max-width: 350px;
@@ -47,7 +45,6 @@
   opacity: 25%;
 }
 
-/* Texto abaixo do campo */
 .texto-opcao {
   color: var(--ícone-header);
   font-weight: 600;
@@ -55,7 +52,6 @@
   margin-bottom: 10px;
 }
 
-/* Botões de rádio */
 .radio-grupo {
   display: flex;
   gap: 25px;
@@ -92,7 +88,6 @@
   border-radius: 50%;
 }
 
-/* Botão */
 .botao-enviar {
   background-color: var(--botao);
   color: var(--cor-de-fundo-secundária);

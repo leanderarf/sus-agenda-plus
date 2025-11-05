@@ -7,35 +7,45 @@
     color: var(--texto-título);
 }
 
-.banner {
-    margin: 0;
-    background-color: var(--cor-de-fundo-terciária);
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    text-align: flex-start;
+.banner-unidades {
     position: relative;
-    display: block;
+    width: 100%;
+    height: 200px;
+    background-color: var(--cor-de-fundo-terciária);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner-unidades img {
+    width: 187px;
+    height: auto;
+    position: absolute;
+    top: 35px;
+    left: 240px;
+    z-index: 1;
 }
 
 .banner-text {
     position: absolute;
     top: 50%;
+    left: 8%;
     transform: translateY(-50%);
     left: 16px;
     width: 68%;
     z-index: 10;
 }
 
-.banner h1 {
+.banner-text h1 {
     font-size: 27px;
-    font-weight: 600;
-    margin-top: 20px;
+    font-weight: 700;
+    margin-top: 10px;
     line-height: 1.05;
     padding: 0 16px 0 0;
 }
 
-.hero p {
+.banner-text p {
     font-size: 12px;
     margin-top: 10px;
     line-height: 1.05;
@@ -43,6 +53,7 @@
     padding: 0 12px 0 0;
     width: 75%;
 }
+
 
 .hero img {
     width: 187px;
@@ -72,18 +83,13 @@
 .campo-input,
 .campo-select {
     flex: 1;
-    min-width: 100px;
+    min-width: 120px;
     padding: 12px;
     border: 1px solid #b6b6b6;
     border-radius: 8px;
-    font-size: 12px;
+    font-size: 14px;
     color: var(--texto-título);
-    font-weight: 500;
     font-family: var(--fonte-secundária);
-}
-
-.campo-input::placeholder {
-    color: var(--texto-título);
 }
 
 .btn-consultar {
@@ -101,8 +107,7 @@
 }
 
 .btn-consultar:hover {
-    background-color: var(--texto-título);
-    opacity: 65%;
+    opacity: 0.7;
 }
 
 .resultados {
@@ -114,7 +119,6 @@
 .resultados h3 {
     font-size: 22px;
     color: var(--texto-título);
-    padding-left: 2px;
     margin-bottom: 20px;
 }
 
@@ -137,21 +141,13 @@
 
 .card-resultado h4 {
     font-size: 16px;
-    font-weight: 700;
+    font-weight: 600;
     color: var(--texto-título);
-    font-family: var(--fonte-secundária);
-    font-weight: 500;
 }
 
 .card-resultado p {
     font-size: 14px;
     color: var(--texto-título);
-    font-family: var(--fonte-secundária);
-    font-weight: 400;
-}
-
-.card-resultado .especialidade {
-    margin-top: 4px;
 }
 
 .btn-agendar {
@@ -166,8 +162,7 @@
 }
 
 .btn-agendar:hover {
-    background-color: var(--texto-título);
-    opacity: 65%;
+    opacity: 0.7;
 }
 
 .paginacao {
@@ -186,14 +181,8 @@
     border-radius: 50%;
     cursor: pointer;
     font-weight: 600;
-    font-family: var(--fonte-principal);
 }
 
 .paginacao .ativo {
     background-color: var(--cor-de-fundo-ícones);
-}
-
-.paginacao span {
-    color: var(--texto-título);
-    font-weight: 600;
 }
